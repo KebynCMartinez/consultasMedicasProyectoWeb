@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<HTML LANG="es">
+    <HEAD>
+        <META CHARSET="UTF-8">
+        <link rel="stylesheet" href="css/style_gral.css">
+        <script type="text/javascript" src="js/consultation_functions.js"></script>
+    </HEAD>
+
+    <div class="modal fade" id="modalRMC" name="modalRMC" role="dialog" aria-labelledby="modalRMCLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div id="modalCRegister" name="modalCRegister" class="modal-content container-form modalCSS">
+            <form class="form" id="formConsultation" name="formConsultation" method="post" onSubmit="registerConsultation(); return false">
+                <div class="modal-header">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <h5 class="modal-title" id="modalRMCLabel"  style="float: left;">Agendar Consulta</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="float: right;">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        Area Especialiadad:
+                        <div class="row">
+                            <div class="col">
+                                <select class="form-control" id="medicalArea" name="medicalArea" onchange="getNameMedical()" required>
+                                    <option value="" selected></option>
+                                </select>
+                            </div><br>
+                        </div>
+                        Medico Especialista:
+                        <div class="row">
+                            <div class="col">
+                                <select class="form-control" id="medicalSpecialty" name="medicalSpecialty" onchange="getHourConsultation()" required>
+                                    <option value="" selected></option>
+                                </select>
+                            </div><br>
+                        </div>
+                        Horario:
+                        <div class="row">
+                            <div class="col">
+                                <select class="form-control" id="hourConsultation" name="hourConsultation" onchange="getMinuteConsultation()" required>
+                                    <option value="" selected>Hora</option>
+                                </select>
+                            </div>
+                            <div class="col">
+                                <select class="form-control" id="minuteConsultation" name="minuteConsultation" required>
+                                    <option value="" selected>Minuto</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col">
+                                <label for="symptomDescription">Describa su malestar:</label>
+                                <textarea class="form-control" id="symptomDescription" name="symptomDescription" rows="5" style="  resize: none;" required></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <button type="submit" class="btn btn-success btn-lg btn-block">Registrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+          </div>
+        </div>
+    </div>
+
+    <div class="modal fade positionReponse" id="modalRCReponse" tabindex="-1" role="dialog" aria-labelledby="modalRCReponse" aria-hidden="true" style="transform: translateY(-20%) !important;">
+        <div class="modal-dialog modal-sm"  role="document">
+          <div class="modal-content">
+            <div class="modal-body container">
+                <div class="row">
+                    <div class="col-3">
+                        <IMG id="imgModalRCReponse" SRC="" TITLE="respuesta" class="imgResponse">
+                    </div>
+                    <div class="col-9 textResponse">
+                        <p id="pModalRCReponse">-</p>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <BODY >
+        <div class="container-form">
+            <div class="wrap3">
+                <h5 class="modal-title" id="modalRegisterLabel">Registrar Consulta</h5>
+                <p>Selecciona la fecha de la consulta mediante un click en el dia deseado.</p>
+                <div>
+                    <div id='calendar'></div> 
+                </div>
+            </div>
+        </div>
+    </BODY>
+</HTML>

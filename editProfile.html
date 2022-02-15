@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<HTML LANG="es">
+    <HEAD>        
+        <META CHARSET="UTF-8">
+        <link rel="stylesheet" href="css/style_gral.css">      
+        <script type="text/javascript" src="js/user_functions.js"></script>
+    </HEAD>
+
+    <div class="modal fade positionReponse positionReponseMM" id="modalEditReponse" tabindex="-1" role="dialog" aria-labelledby="modalEditReponse" aria-hidden="true">
+        <div class="modal-dialog modal-sm" role="document">
+          <div class="modal-content">
+            <div class="modal-body container">
+                <div class="row">
+                    <div class="col-3">
+                        <IMG id="imgModalEditResponse" SRC="" TITLE="respuesta" class="imgResponse">
+                    </div>
+                    <div class="col-9 textResponse">
+                        <p id="pModalEditResponse">-</p>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    
+    <BODY>
+        <div class="container-form">
+            <div class="wrap2">
+                <form action="" class="form" id="formEditAccount" name="formEditAccount" method="post" onSubmit="editAccount(); return false">
+                    <div class="row">
+                        <div class="col">
+                            <h5 class="modal-title" id="modalRegisterLabel">Actualizar Informacion</h5><br><br>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-group col">
+                            <input type="text" id="name" name="name" maxlength="50" required>
+                            <label class="label" for="name">Nombre(s)</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-responsiveModal">
+                            <div class="row">
+                                <div class="input-group col">
+                                    <input type="text" id="apPaterno" name="apPaterno" maxlength="50" required>
+                                    <label class="label" for="apPaterno">Apellido Paterno</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-responsiveModal">
+                            <div class="row">
+                                <div class="input-group col">
+                                    <input type="text" id="apMaterno" name="apMaterno" maxlength="50" required>
+                                    <label class="label" for="apMaterno">Apellido Materno</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-responsiveModal">
+                            <div class="row">
+                                <div class="col input-group">
+                                    <input type="text" id="nss" name="nss" maxlength="11">
+                                    <label class="label" for="nss">NSS</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-responsiveModal">
+                            <div class="row">
+                                <div class="col input-group">
+                                    <input type="text" id="curp" name="curp" maxlength="18">
+                                    <label class="label" for="curp">CURP</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-responsiveModal">
+                            Sexo   
+                            <div class="row">
+                                <div class="col-responsive3">
+                                    <input type="radio" name="gender" value="M" required>
+                                    <label for="manRadio">Hombre</label>
+                                </div>
+                                <div class="col-responsive3">
+                                    <input type="radio" name="gender" value="W">
+                                    <label for="womanRadio">Mujer</label>
+                                </div>
+                                <div class="col-responsive3">
+                                    <input type="radio" name="gender" value="O">
+                                    <label for="anotherRadio">Otro</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-responsiveModal">
+                            Estado Civil
+                            <div class="row">
+                                <div class="col">
+                                    <select class="form-control" id="civilStatus" name="civilStatus">
+                                        <option value="" selected>-</option>
+                                        <option value="1">Soltero(a)</option>	
+                                        <option value="2">Casado(a)</option>	
+                                        <option value="3">Divorciado(a)</option>	
+                                        <option value="4">Viudo(a)</option>	
+                                        <option value="5">Concubinato</option>
+                                        <option value="6">Separación en proceso judicial</option>	                            
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    Fecha Nacimiento              
+                    <div class="row">
+                        <div class="col-responsive3"><br>
+                            <select class="form-control" id="bornDay" name="bornDay" required>
+                                <option value="" selected>Dia</option>
+                            </select>
+                        </div>    
+                        <div class="col-responsive3"><br>
+                            <select class="form-control" id="bornMonth" name="bornMonth" required>
+                                <option value="" selected>Mes</option>
+                                <option value="1">Enero</option>
+                                <option value="2">Febrero</option>
+                                <option value="3">Marzo</option>
+                                <option value="4">Abril</option>
+                                <option value="5">Mayo</option>
+                                <option value="6">Junio</option>
+                                <option value="7">Julio</option>
+                                <option value="8">Agosto</option>
+                                <option value="9">Septiembre</option>
+                                <option value="10">Octubre</option>
+                                <option value="11">Noviembre</option>
+                                <option value="12">Diciembre</option>
+                            </select>
+                        </div>  
+                        <div class="col-responsive3"><br>
+                            <select class="form-control" id="bornYear" name="bornYear" required>
+                                <option value="" selected>Año</option>
+                            </select>
+                        </div>                  
+                    </div><br>                   
+                    <div class="row">
+                        <div class="col-responsiveModal">
+                            <div class="row">
+                                <div class="col input-group">
+                                    <input type="email" id="email" name="email" maxlength="50" required>
+                                    <label class="label" for="email">Correo electronico</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-responsiveModal">
+                            <div class="row">
+                                <div class="col input-group">
+                                    <input type="text" id="phone" name="phone" maxlength="50">
+                                    <label class="label" for="phone">Telefono</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-responsiveModal">
+                            <div class="row">
+                                <div class="input-group col">
+                                    <input type="text" id="cp" name="cp" maxlength="50">
+                                    <label class="label" for="cp">CP</label>
+                                </div>  
+                            </div>  
+                        </div>  
+                        <div class="col-responsiveModal">
+                            Estado:
+                            <div class="row">
+                                <div class="col">
+                                    <select class="form-control" id="state" name="state">
+                                        <option value="" selected>-</option>
+                                        <option value="1">Aguascalientes</option>	
+                                        <option value="2">Baja California (Norte)</option>	
+                                        <option value="3">Baja California Sur</option>	
+                                        <option value="4">Campeche</option>	
+                                        <option value="5">Coahuila</option>	
+                                        <option value="6">Colima</option>	
+                                        <option value="7">Chiapas</option>	
+                                        <option value="8">Chihuahua</option>	
+                                        <option value="9">Distrito Federal</option>	
+                                        <option value="10">Durango</option>
+                                        <option value="11">Estado de México</option>
+                                        <option value="12">Guanajuato</option>
+                                        <option value="13">Guerrero</option>
+                                        <option value="14">Hidalgo</option>
+                                        <option value="15">Jalisco</option>
+                                        <option value="16">Michoacán</option>
+                                        <option value="17">Morelos</option>
+                                        <option value="18">Nayarit</option>
+                                        <option value="19">Nuevo Léon</option>
+                                        <option value="20">Oaxaca</option>
+                                        <option value="21">Puebla</option>
+                                        <option value="22">Quintana Roo</option>
+                                        <option value="23">Querétaro</option>
+                                        <option value="24">Sinaloa</option>
+                                        <option value="25">San Luis Potosi</option>
+                                        <option value="26">Sonora</option>
+                                        <option value="27">Tabasco</option>
+                                        <option value="28">Tamaulipas</option>
+                                        <option value="29">Tlaxcala</option>
+                                        <option value="30">Veracruz</option>
+                                        <option value="31">Yucatán</option>
+                                        <option value="32">Zacatecas</option>                                            
+                                    </select>
+                                </div>
+                            </div>  
+                        </div>  
+                    </div>
+                    <div class="row">
+                        <div class="input-group col">
+                            <input type="text" id="municipality" name="municipality" maxlength="50">
+                            <label class="label" for="name">Municipio/Localidad</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-group col">
+                            <input type="text" id="suburb" name="suburb" maxlength="50">
+                            <label class="label" for="suburb">Colonia</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-group col">
+                            <input type="text" id="street" name="street" maxlength="50">
+                            <label class="label" for="street">Calle</label>
+                        </div>  
+                    </div>
+                    <div class="row">
+                        <div class="col-responsiveModal">
+                            <div class="row">
+                                <div class="input-group col">
+                                    <input type="text" id="externalNumber" name="externalNumber" maxlength="50">
+                                    <label class="label" for="externalNumber">Numero Exterior</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-responsiveModal">
+                            <div class="row">
+                                <div class="input-group col">
+                                    <input type="text" id="internalNumber" name="internalNumber" maxlength="50">
+                                    <label class="label" for="internalNumber">Numero Interior</label>
+                                </div>    
+                            </div>
+                        </div>   
+                    </div>
+
+                    <div>
+                        <button type="submit" class="btn btn-success btn-lg btn-block">Actualizar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </BODY>
+</HTML>

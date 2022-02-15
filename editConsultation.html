@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<HTML LANG="es">
+    <HEAD>
+        <META CHARSET="UTF-8">
+        <link rel="stylesheet" href="css/style_gral.css">
+        <script type="text/javascript" src="js/consultation_functions.js"></script>
+    </HEAD>
+
+    <div class="modal fade" id="modalEMC" name="modalEMC" role="dialog" aria-labelledby="modalEMCLabel" aria-hidden="true" style="transform: translateY(-5%) !important;">
+        <div class="modal-dialog" role="document">
+          <div id="modalCRegister" name="modalCRegister" class="modal-content container-form modalCSS">
+            <form class="form" id="formConsultation" name="formConsultation" method="post" onSubmit="updateConsultation(); return false">
+                <div class="modal-header">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <h5 class="modal-title" id="modalEMCLabel"  style="float: left;">Editar Consulta</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="float: right;">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        Fecha:
+                        <div class="row">
+                            <div class="col">
+                                <input class="form-control" type="date" value="" id="inputDate" required>
+                            </div><br>
+                        </div>
+                        Area Especialiadad:
+                        <div class="row">
+                            <div class="col">
+                                <select class="form-control" id="medicalArea" name="medicalArea" onchange="getNameMedical()" required>
+                                    <option value="" selected></option>
+                                </select>
+                            </div><br>
+                        </div>
+                        Medico Especialista:
+                        <div class="row">
+                            <div class="col">
+                                <select class="form-control" id="medicalSpecialty" name="medicalSpecialty" onchange="getHourConsultation()" required>
+                                    <option value="" selected></option>
+                                </select>
+                            </div><br>
+                        </div>
+                        Horario:
+                        <div class="row">
+                            <div class="col">
+                                <select class="form-control" id="hourConsultation" name="hourConsultation" onchange="getMinuteConsultation()" required>
+                                    <option value="" selected>Hora</option>
+                                </select>
+                            </div>
+                            <div class="col">
+                                <select class="form-control" id="minuteConsultation" name="minuteConsultation" required>
+                                    <option value="" selected>Minuto</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col">
+                                <label for="symptomDescription">Describa su malestar:</label>
+                                <textarea class="form-control" id="symptomDescription" name="symptomDescription" rows="5" style="  resize: none;" required></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <button type="submit" class="btn btn-success btn-lg btn-block">Actualizar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+          </div>
+        </div>
+    </div>
+
+    <div class="modal fade positionReponse" id="modalRCReponse" tabindex="-1" role="dialog" aria-labelledby="modalRCReponse" aria-hidden="true" style="transform: translateY(-20%) !important;">
+        <div class="modal-dialog modal-sm"  role="document">
+          <div class="modal-content">
+            <div class="modal-body container">
+                <div class="row">
+                    <div class="col-3">
+                        <IMG id="imgModalRCReponse" SRC="" TITLE="respuesta" class="imgResponse">
+                    </div>
+                    <div class="col-9 textResponse">
+                        <p id="pModalRCReponse">-</p>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <BODY >
+        <div class="container-form">
+            <div class="wrap3">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col">
+                            <h5 class="modal-title" id="modalRegisterLabel">Historial de Consultas</h5><br>
+                        </div>  
+                    </div>  
+                    <div class="row">
+                        <div class="col">
+                            <table class='table' id='tableConsultation'>
+                                <thead class='thead-dark'>
+                                    <tr>
+                                    <th>Folio</th>
+                                    <th>Fecha</th> 
+                                    <th>Hora</th>
+                                    <th>Area</th> 
+                                    <th>Medico</th> 
+                                    <th>Estatus</th> 
+                                    <th></th>
+                                    </tr> 
+                                </thead>
+                                <tbody id="bodyTable"></tbody>
+                            </table>
+                          </div>  
+                    </div>
+                </div>
+            </div>
+        </div>
+    </BODY>
+</HTML>

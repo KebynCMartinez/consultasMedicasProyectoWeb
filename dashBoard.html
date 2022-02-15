@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Panel Salud Digital</title>
+        
+        <!-- ================= Favicon ================== -->
+        <!-- Standard -->
+        <LINK HREF="images/Trofeo.png" HREFLANG="es" REL="icon" TYPE="image/gif" SIZES="32x32" MEDIA="screen"></LINK>
+        <!-- Retina iPad Touch Icon-->
+        <link rel="apple-touch-icon" sizes="144x144" href="http://placehold.it/144.png/000/fff">
+        <!-- Retina iPhone Touch Icon-->
+        <link rel="apple-touch-icon" sizes="114x114" href="http://placehold.it/114.png/000/fff">
+        <!-- Standard iPad Touch Icon-->
+        <link rel="apple-touch-icon" sizes="72x72" href="http://placehold.it/72.png/000/fff">
+        <!-- Standard iPhone Touch Icon-->
+        <link rel="apple-touch-icon" sizes="57x57" href="http://placehold.it/57.png/000/fff">
+
+        <!-- Styles -->
+        <link href="assets/css/lib/weather-icons.css" rel="stylesheet" />
+        <link href="assets/css/lib/owl.theme.default.min.css" rel="stylesheet" />
+        <link href="assets/css/lib/font-awesome.min.css" rel="stylesheet">
+        <link href="assets/css/lib/themify-icons.css" rel="stylesheet">
+        <link href="assets/css/lib/menubar/sidebar.css" rel="stylesheet">
+        <link href="assets/css/lib/bootstrap.min.css" rel="stylesheet">
+
+        <link href="assets/css/lib/helper.css" rel="stylesheet">
+        <link href="assets/css/style.css" rel="stylesheet">
+                
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type='text/css'>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    </head>
+
+    <body>
+        <div class="sidebar sidebar-hide-to-small sidebar-shrink sidebar-gestures">
+            <div class="nano">
+                <div class="nano-content">
+                    <div class="logo"><a href="dashBoard.html"><span>Salud Digital</span></a></div>
+                    <ul>
+                        <!--<li><a href="app-event-calender.html"><i class="ti-bar-chart-alt"></i>Publicaciones</a></li>-->
+                        <li><a onClick="loadChat()"><i class="ti-email"></i>Consultorio Virtual</a></li>
+                        <li><a class="sidebar-sub-toggle"><i class="ti-user"></i>Perfil<span class="sidebar-collapse-icon ti-angle-down"></span>
+                            <ul>
+                                <li><a onClick="loadViewProfile()">Visualizar</a></li>
+                                <li><a onClick="loadEditProfile()">Actualizar</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="sidebar-sub-toggle"><i class="ti-calendar"></i>Consulta<span class="sidebar-collapse-icon ti-angle-down"></span>
+                            <ul>
+                                <li id="opcUser2"><a onClick="loadRegisterConsultation()">Registrar</a></li>
+                                <li id="opcUser3"><a onClick="loadEditConsultation()">Historial</a></li>
+                                <li id="opcUser4"><a onClick="loadConsultationGral()">Historial</a></li>
+
+                            </ul>
+                        </li>
+
+                        <li><a href="login.html"><i class="ti-close"></i> Cerrar sesion</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- /# sidebar -->
+        <div class="header">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="float-left">
+                            <div class="hamburger sidebar-toggle">
+                                <span class="line"></span>
+                                <span class="line"></span>
+                                <span class="line"></span>
+                            </div>
+                        </div>
+                        <div class="float-right">
+                            <ul>
+                                <li class="header-icon dib"><span id="nameUser" class="user-avatar"></span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-wrap">
+            <div id="containerGral" name="containerGral" class="container-fluid">
+
+            </div>
+        </div>
+
+        <!-- jquery vendor -->
+        <script src="assets/js/lib/jquery.min.js"></script>
+        <script src="assets/js/lib/jquery.nanoscroller.min.js"></script>
+        <!-- nano scroller -->
+        <script src="assets/js/lib/menubar/sidebar.js"></script>
+        <script src="assets/js/lib/preloader/pace.min.js"></script>
+        <!-- sidebar -->
+        <script src="assets/js/lib/bootstrap.min.js"></script>
+
+        <link href='css/calendar/fullcalendar.min.css' rel='stylesheet'/>
+        <link rel="stylesheet" href="css/style_gral.css">
+
+
+        <script src='js/calendar/moment.min.js'></script>
+        <script src='js/calendar/fullcalendar.min.js'></script>
+        <script src='js/calendar/es.js'></script>
+
+        <script type="text/javascript" src="js/dashBoard_functions.js"></script>
+
+
+
+    </body>
+
+</html>
